@@ -1,5 +1,6 @@
+from plone import api
 from zope import schema
-from zope.interface import implements
+from zope import interface
 from zope.formlib import form
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
@@ -9,6 +10,7 @@ from collective.portlet.mailman import MailmanMessageFactory as _
 from five import grok
 from plone.directives import form as ploneform
 from z3c.form import button
+from Products.validation import validation
 
 
 class IMailmanPortlet(IPortletDataProvider):
@@ -38,7 +40,7 @@ class IMailmanPortlet(IPortletDataProvider):
 
 
 class Assignment(base.Assignment):
-    implements(IMailmanPortlet)
+    interface.implements(IMailmanPortlet)
 
     header = u""
     name = u""
@@ -58,16 +60,17 @@ class Assignment(base.Assignment):
 
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('mailman.pt')
+    showform = True
 
     @property
     def available(self):
         return True
 
     def form(self):
-        from collective.portlet.mailman.form import SubscriptionForm
-        raw_form = SubscriptionForm(self.context, self.request)
-        raw_form.update()
-        return raw_form
+        if self.showform:
+            raw_form = SubscriptionForm(self.context, self.request)
+            raw_form.update()
+            return raw_form
 
 
 class AddForm(base.AddForm):
@@ -89,11 +92,19 @@ class EditForm(base.EditForm):
 
 # the subscription form
 
+def validateEmail(value):
+    validator = validation.validatorFor('isEmail')
+    if validator(str(value)) != 1:
+        raise interface.Invalid(_(u"Email address is invalid"))
+    return True
+
+
 class ISubscription(ploneform.Schema):
     email = schema.TextLine(
         title=_(u"E-mail address"),
         description=_(u"E-mail address you wish to subscribe."),
         required=True,
+        constraint=validateEmail,
     )
 
 
@@ -110,7 +121,14 @@ class SubscriptionForm(ploneform.SchemaForm):
         if errors:
             self.status = self.formErrorsMessage
             return
-        self.status = 'OK'
+        api.portal.send_email(
+            recipient=self.context.data.address,
+            sender=data.get('email'),
+            subject='subscribe',
+            body='subscribe %s' % data.get('email'),
+        )
+        self.status = self.context.data.message
+
 
 
 
