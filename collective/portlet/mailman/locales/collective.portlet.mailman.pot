@@ -1,0 +1,83 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-06-11 11:49+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.portlet.mailman\n"
+
+#: ./../mailman.py:78
+msgid "Add Mailman Portlet"
+msgstr ""
+
+#: ./../mailman.py:31
+msgid "Address used to subscribe to the list"
+msgstr ""
+
+#: ./../mailman.py:25
+msgid "Descriptive name of the list"
+msgstr ""
+
+#: ./../mailman.py:104
+msgid "E-mail address"
+msgstr ""
+
+#: ./../mailman.py:105
+msgid "E-mail address you wish to subscribe."
+msgstr ""
+
+#: ./../mailman.py:89
+msgid "Edit Mailman Portlet"
+msgstr ""
+
+#: ./../mailman.py:98
+msgid "Email address is invalid"
+msgstr ""
+
+#: ./../mailman.py:18
+msgid "Header"
+msgstr ""
+
+#: ./../mailman.py:19
+msgid "Header of the portlet"
+msgstr ""
+
+#: ./../mailman.py:24
+msgid "List name"
+msgstr ""
+
+#: ./../mailman.py:30
+msgid "Mailman address"
+msgstr ""
+
+#: ./../mailman.py:37
+msgid "Message displayed after subscribing"
+msgstr ""
+
+#: ./../mailman.py:118
+msgid "Subscribe"
+msgstr ""
+
+#: ./../mailman.py:36
+msgid "Subscription message"
+msgstr ""
+
+#: ./../mailman.py:79
+msgid "This portlet displays a mailman subscription form."
+msgstr ""
+
+#: ./../mailman.py:58
+msgid "mailman portlet"
+msgstr ""
+
