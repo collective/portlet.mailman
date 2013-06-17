@@ -1,5 +1,5 @@
 <dl class="portlet portletMailman"
-	i18n:domain="plone">
+	i18n:domain="collective.portlet.mailman">
   <dt class="portletHeader">
     <span class="portletTopLeft"></span>
     <span tal:replace="view/data/title"/>
