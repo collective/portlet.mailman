@@ -32,6 +32,11 @@ class IMailmanPortlet(IPortletDataProvider):
         required=True,
     )
 
+    subj = schema.Text(
+        title=_(u"Description of mailinglist"),
+        description=_(u"Descriptive text shown in the portlet"),
+        required=False,
+    )
     message = schema.Text(
         title=_(u"Subscription message"),
         description=_(u"Message displayed after subscribing"),
@@ -45,12 +50,16 @@ class Assignment(base.Assignment):
     header = u""
     name = u""
     address = u""
+    subj = u""
     message = u""
 
-    def __init__(self, header=u"", name=u"", address=u"", message=u""):
+    def __init__(
+        self, header=u"", name=u"", address=u"", subj=u"", message=u""
+    ):
         self.header = header
         self.name = name
         self.address = address
+        self.subj = subj
         self.message = message
 
     @property

@@ -6,6 +6,7 @@
     <span class="portletTopRight"></span>
   </dt>
   <dd class="portletItem">
+    <span tal:replace="view/data/subj" />
   <tal:form define="view view/form">
 	  <metal:block use-macro="view/@@ploneform-macros/titlelessform" />
   </tal:form>
