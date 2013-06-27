@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-06-11 11:49+0000\n"
+"POT-Creation-Date: 2013-06-27 11:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.portlet.mailman\n"
 
-#: ./../mailman.py:78
+#: ./../mailman.py:87
 msgid "Add Mailman Portlet"
 msgstr ""
 
@@ -25,23 +25,31 @@ msgstr ""
 msgid "Address used to subscribe to the list"
 msgstr ""
 
+#: ./../mailman.py:36
+msgid "Description of mailinglist"
+msgstr ""
+
 #: ./../mailman.py:25
 msgid "Descriptive name of the list"
 msgstr ""
 
-#: ./../mailman.py:104
+#: ./../mailman.py:37
+msgid "Descriptive text shown in the portlet"
+msgstr ""
+
+#: ./../mailman.py:113
 msgid "E-mail address"
 msgstr ""
 
-#: ./../mailman.py:105
+#: ./../mailman.py:114
 msgid "E-mail address you wish to subscribe."
 msgstr ""
 
-#: ./../mailman.py:89
+#: ./../mailman.py:98
 msgid "Edit Mailman Portlet"
 msgstr ""
 
-#: ./../mailman.py:98
+#: ./../mailman.py:107
 msgid "Email address is invalid"
 msgstr ""
 
@@ -61,23 +69,23 @@ msgstr ""
 msgid "Mailman address"
 msgstr ""
 
-#: ./../mailman.py:37
+#: ./../mailman.py:42
 msgid "Message displayed after subscribing"
 msgstr ""
 
-#: ./../mailman.py:118
+#: ./../mailman.py:127
 msgid "Subscribe"
 msgstr ""
 
-#: ./../mailman.py:36
+#: ./../mailman.py:41
 msgid "Subscription message"
 msgstr ""
 
-#: ./../mailman.py:79
+#: ./../mailman.py:88
 msgid "This portlet displays a mailman subscription form."
 msgstr ""
 
-#: ./../mailman.py:58
+#: ./../mailman.py:67
 msgid "mailman portlet"
 msgstr ""
 
